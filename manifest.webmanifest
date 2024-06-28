@@ -1,0 +1,12 @@
+{
+  "name": "Space Invasion Ultra DEMO",
+  "short_name": "Space Invasion Ultra DEMO",
+  "id": "com.example.gamename",
+  "description": "",
+  "orientation": "any",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "black",
+  "categories": ["games", "entertainment"],
+  "icons": []
+}
