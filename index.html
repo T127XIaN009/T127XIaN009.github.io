@@ -43,9 +43,9 @@
         .front-page button:hover {
             background: #21a1f1;
         }
-        .game-page iframe {
-            width: 100%;
-            height: 100%;
+        iframe {
+            width: 100vw; /* Full width of the viewport */
+            height: 100vh; /* Full height of the viewport */
             border: none; /* Removes iframe border */
         }
     </style>
@@ -56,20 +56,11 @@
         <button onclick="startGame()">Start Game</button>
     </div>
     <div class="game-page" id="game-page" style="display: none;">
-        <iframe id="game-iframe" src="Game/index.html/index2.html"></iframe>
+        <iframe src="Game/index.html"></iframe>
     </div>
 
     <script>
         function startGame() {
-            const iframe = document.getElementById('game-iframe');
-            iframe.onload = function() {
-                console.log('Game loaded successfully.');
-            };
-            iframe.onerror = function() {
-                alert('Failed to load the game. Please check the console for more details.');
-                console.error('Error loading the game iframe.');
-            };
-
             document.getElementById('front-page').style.display = 'none';
             document.getElementById('game-page').style.display = 'flex';
         }
