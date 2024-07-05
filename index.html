@@ -56,11 +56,20 @@
         <button onclick="startGame()">Start Game</button>
     </div>
     <div class="game-page" id="game-page" style="display: none;">
-        <iframe src="Game/index.html"></iframe>
+        <iframe id="game-iframe" src="Game/index.html"></iframe>
     </div>
 
     <script>
         function startGame() {
+            const iframe = document.getElementById('game-iframe');
+            iframe.onload = function() {
+                console.log('Game loaded successfully.');
+            };
+            iframe.onerror = function() {
+                alert('Failed to load the game. Please check the console for more details.');
+                console.error('Error loading the game iframe.');
+            };
+
             document.getElementById('front-page').style.display = 'none';
             document.getElementById('game-page').style.display = 'flex';
         }
