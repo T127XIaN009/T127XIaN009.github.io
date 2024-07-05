@@ -2,6 +2,27 @@
 <html>
 <head>
     <title>My Awesome Game</title>
+    <style>
+        .game-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .game-page {
+            width: 800px;
+            height: 600px;
+            border: 1px solid #ccc;
+            overflow: hidden;
+        }
+
+        .game-page iframe {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 <body>
     <div class="game-container">
